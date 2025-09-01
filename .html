@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios CSS - Níveis 1 a 4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header com navegação horizontal -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Meu Portfólio</h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#galeria">Galeria</a></li>
+                    <li><a href="#produtos">Produtos</a></li>
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#landing">Landing</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Sobre - Página pessoal simples -->
+    <section id="sobre" class="sobre">
+        <div class="container">
+            <h2>Sobre Mim</h2>
+            <div class="perfil">
+                <img src="https://via.placeholder.com/200x200/4A90E2/FFFFFF?text=Perfil" 
+                     alt="Minha foto de perfil" 
+                     class="foto-perfil">
+                <div class="info-perfil">
+                    <p>Olá! Sou um desenvolvedor apaixonado por criar experiências digitais incríveis. 
+                       Trabalho com HTML, CSS e JavaScript para construir interfaces modernas e responsivas.</p>
+                    <h3>Meus Hobbies:</h3>
+                    <ul class="hobbies">
+                        <li>🎨 jogar video game</li>
+                        <li>📚 jogar futebol</li>
+                        <li>🏃‍♂️ Correr ao ar livre</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Galeria de Imagens com Flexbox -->
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <h2>Galeria de Imagens</h2>
+            <div class="galeria-grid">
+                <img src="https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Imagem+1" alt="Imagem 1">
+                <img src="https://via.placeholder.com/300x200/4ECDC4/FFFFFF?text=Imagem+2" alt="Imagem 2">
+                <img src="https://via.placeholder.com/300x200/45B7D1/FFFFFF?text=Imagem+3" alt="Imagem 3">
+                <img src="https://via.placeholder.com/300x200/96CEB4/FFFFFF?text=Imagem+4" alt="Imagem 4">
+                <img src="https://via.placeholder.com/300x200/FFEAA7/FFFFFF?text=Imagem+5" alt="Imagem 5">
+                <img src="https://via.placeholder.com/300x200/DDA0DD/FFFFFF?text=Imagem+6" alt="Imagem 6">
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards de Produtos com Flexbox -->
+    <section id="produtos" class="produtos">
+        <div class="container">
+            <h2>Nossos Produtos</h2>
+            <div class="produtos-grid">
+                <div class="card-produto">
+                    <img src="https://via.placeholder.com/250x180/FF6B6B/FFFFFF?text=Produto+1" alt="Produto 1">
+                    <div class="card-content">
+                        <h3>Produto Incrível</h3>
+                        <p>Descrição detalhada do produto com suas principais características e benefícios.</p>
+                        <button class="btn-comprar">Comprar Agora</button>
+                    </div>
+                </div>
+                <div class="card-produto">
+                    <img src="https://via.placeholder.com/250x180/4ECDC4/FFFFFF?text=Produto+2" alt="Produto 2">
+                    <div class="card-content">
+                        <h3>Produto Premium</h3>
+                        <p>Descrição detalhada do produto com suas principais características e benefícios.</p>
+                        <button class="btn-comprar">Comprar Agora</button>
+                    </div>
+                </div>
+                <div class="card-produto">
+                    <img src="https://via.placeholder.com/250x180/45B7D1/FFFFFF?text=Produto+3" alt="Produto 3">
+                    <div class="card-content">
+                        <h3>Produto Especial</h3>
+                        <p>Descrição detalhada do produto com suas principais características e benefícios.</p>
+                        <button class="btn-comprar">Comprar Agora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Grade de 9 Cards em Grid 3x3 -->
+    <section class="grade-cards">
+        <div class="container">
+            <h2>Grade de Cards</h2>
+            <div class="grade-grid">
+                <div class="card-item">Artigo 1</div>
+                <div class="card-item">Artigo 2</div>
+                <div class="card-item">Artigo 3</div>
+                <div class="card-item">Artigo 4</div>
+                <div class="card-item">Artigo 5</div>
+                <div class="card-item">Artigo 6</div>
+                <div class="card-item">Artigo 7</div>
+                <div class="card-item">Artigo 8</div>
+                <div class="card-item">Artigo 9</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Layout de Página com Grid -->
+    <section class="layout-grid">
+        <div class="container">
+            <h2>Layout com Grid</h2>
+            <div class="page-grid">
+                <header class="grid-header">Header</header>
+                <aside class="grid-sidebar">Menu Lateral</aside>
+                <main class="grid-main">Conteúdo Principal</main>
+                <footer class="grid-footer">Footer</footer>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard com 4 Cards -->
+    <section id="dashboard" class="dashboard">
+        <div class="container">
+            <h2>Dashboard</h2>
+            <div class="dashboard-grid">
+                <div class="card-info">
+                    <h3>Vendas</h3>
+                    <p class="numero">1,234</p>
+                    <p class="descricao">Vendas este mês</p>
+                </div>
+                <div class="card-info">
+                    <h3>Usuários</h3>
+                    <p class="numero">5,678</p>
+                    <p class="descricao">Usuários ativos</p>
+                </div>
+                <div class="card-info">
+                    <h3>Receita</h3>
+                    <p class="numero">R$ 12.345</p>
+                    <p class="descricao">Receita mensal</p>
+                </div>
+                <div class="card-info">
+                    <h3>Pedidos</h3>
+                    <p class="numero">890</p>
+                    <p class="descricao">Pedidos pendentes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Página de Portfólio Responsiva -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Meu Portfólio</h2>
+            
+            <!-- Seção Sobre -->
+            <div class="portfolio-section">
+                <h3>Sobre Mim</h3>
+                <p>Desenvolvedor full-stack com experiência em tecnologias modernas.</p>
+            </div>
+            
+            <!-- Seção Projetos Responsiva -->
+            <div class="portfolio-section">
+                <h3>Projetos</h3>
+                <div class="projetos-grid">
+                    <div class="card-projeto">
+                        <img src="https://via.placeholder.com/300x200/FF6B6B/FFFFFF?text=Projeto+1" alt="Projeto 1">
+                        <h4>E-commerce Moderno</h4>
+                        <p>Plataforma de vendas online com design responsivo.</p>
+                    </div>
+                    <div class="card-projeto">
+                        <img src="https://via.placeholder.com/300x200/4ECDC4/FFFFFF?text=Projeto+2" alt="Projeto 2">
+                        <h4>App Mobile</h4>
+                        <p>Aplicativo móvel para gestão de tarefas.</p>
+                    </div>
+                    <div class="card-projeto">
+                        <img src="https://via.placeholder.com/300x200/45B7D1/FFFFFF?text=Projeto+3" alt="Projeto 3">
+                        <h4>Dashboard Analytics</h4>
+                        <p>Painel de controle com visualizações de dados.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Seção Contato -->
+            <div class="portfolio-section">
+                <h3>Contato</h3>
+                <p>Email: contato@exemplo.com | Tel: (11) 99999-9999</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Landing Page Responsiva -->
+    <section id="landing" class="landing">
+        <div class="container">
+            <div class="landing-content">
+                <div class="landing-texto">
+                    <h2>Transforme Sua Ideia em Realidade</h2>
+                    <p>Desenvolvemos soluções digitais inovadoras que impulsionam seu negócio para o próximo nível.</p>
+                    <button class="btn-cta">Começar Agora</button>
+                </div>
+                <div class="landing-imagem">
+                    <img src="https://via.placeholder.com/400x300/667eea/FFFFFF?text=Hero+Image" alt="Imagem principal">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Exercícios CSS. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

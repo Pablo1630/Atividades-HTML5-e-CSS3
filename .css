@@ -1,0 +1,643 @@
+/* ========================================
+   RESET E ESTILOS BASE
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+/* ========================================
+   NÍVEL 1: FUNDAMENTOS HTML + CSS
+   ======================================== */
+
+/* Header com navegação horizontal */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+/* Navegação horizontal */
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+}
+
+.nav-list a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Seção Sobre - Página pessoal simples */
+.sobre {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 4rem 0;
+}
+
+.sobre h2 {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.foto-perfil {
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.info-perfil h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.hobbies {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.hobbies li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+}
+
+/* ========================================
+   NÍVEL 2: FLEXBOX
+   ======================================== */
+
+/* Galeria de Imagens com Flexbox */
+.galeria {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    padding: 4rem 0;
+}
+
+.galeria-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.galeria-grid img {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.galeria-grid img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Cards de Produtos com Flexbox */
+.produtos {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    padding: 4rem 0;
+}
+
+.produtos-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.card-produto {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+}
+
+.card-produto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+.card-produto img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card-content h3 {
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.card-content p {
+    color: #666;
+    line-height: 1.5;
+}
+
+.btn-comprar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.btn-comprar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* ========================================
+   NÍVEL 3: GRID LAYOUT
+   ======================================== */
+
+/* Grade de 9 Cards em Grid 3x3 */
+.grade-cards {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4rem 0;
+}
+
+.grade-cards h2 {
+    color: white;
+}
+
+.grade-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.card-item:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Layout de Página com Grid */
+.layout-grid {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    padding: 4rem 0;
+}
+
+.page-grid {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    min-height: 400px;
+}
+
+.grid-header {
+    grid-area: header;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.grid-sidebar {
+    grid-area: sidebar;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.grid-main {
+    grid-area: main;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.grid-footer {
+    grid-area: footer;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+/* Dashboard com 4 Cards */
+.dashboard {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4rem 0;
+}
+
+.dashboard h2 {
+    color: white;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card-info {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.card-info:hover {
+    transform: translateY(-5px);
+}
+
+.card-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.card-info .numero {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.card-info .descricao {
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   NÍVEL 4: MEDIA QUERIES (RESPONSIVIDADE)
+   ======================================== */
+
+/* Página de Portfólio Responsiva */
+.portfolio {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    padding: 4rem 0;
+}
+
+.portfolio-section {
+    margin-bottom: 3rem;
+}
+
+.portfolio-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.portfolio-section p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.projetos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card-projeto {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-projeto:hover {
+    transform: translateY(-5px);
+}
+
+.card-projeto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-projeto h4 {
+    padding: 1.5rem 1.5rem 0.5rem;
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.card-projeto p {
+    padding: 0 1.5rem 1.5rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Landing Page Responsiva */
+.landing {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4rem 0;
+}
+
+.landing h2 {
+    color: white;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.landing-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.landing-texto {
+    flex: 1;
+}
+
+.landing-texto p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.btn-cta {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(255, 107, 107, 0.4);
+}
+
+.landing-imagem {
+    flex: 1;
+    text-align: center;
+}
+
+.landing-imagem img {
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Footer */
+.footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* ========================================
+   MEDIA QUERIES PARA RESPONSIVIDADE
+   ======================================== */
+
+/* Tablet (768px e menor) */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    /* Header responsivo */
+    .header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-list {
+        gap: 1rem;
+    }
+    
+    /* Perfil responsivo */
+    .perfil {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    /* Dashboard responsivo */
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Grade responsiva */
+    .grade-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    /* Layout grid responsivo */
+    .page-grid {
+        grid-template-areas: 
+            "header"
+            "sidebar"
+            "main"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+    
+    /* Landing responsivo */
+    .landing-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    /* Projetos responsivo */
+    .projetos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+/* Mobile (600px e menor) */
+@media (max-width: 600px) {
+    /* Navegação empilhada */
+    .nav-list {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    /* Galeria responsiva */
+    .galeria-grid {
+        gap: 1rem;
+    }
+    
+    .galeria-grid img {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    /* Produtos responsivo */
+    .produtos-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card-produto {
+        max-width: 100%;
+    }
+    
+    /* Grade responsiva */
+    .grade-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Projetos responsivo */
+    .projetos-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    /* Landing responsivo */
+    .landing-texto h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .landing-imagem img {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* Mobile pequeno (480px e menor) */
+@media (max-width: 480px) {
+    .sobre h2,
+    .galeria h2,
+    .produtos h2,
+    .dashboard h2,
+    .projetos h2,
+    .grade-cards h2,
+    .layout-grid h2,
+    .portfolio h2,
+    .landing h2 {
+        font-size: 2rem;
+    }
+    
+    .perfil {
+        gap: 1.5rem;
+    }
+    
+    .foto-perfil {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .landing-texto h2 {
+        font-size: 1.8rem;
+    }
+    
+    .btn-cta {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .card-content {
+        padding: 1rem;
+    }
+    
+    .card-info {
+        padding: 1.5rem;
+    }
+}
